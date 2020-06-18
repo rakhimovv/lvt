@@ -16,6 +16,8 @@ python setup.py build develop
 
 ## Inference on the pretrained model
 
+Download the pretrained model here: https://yadi.sk/d/8QjrPTcxznrqNg
+
 In order to run inference use the command:
 
 ```bash
