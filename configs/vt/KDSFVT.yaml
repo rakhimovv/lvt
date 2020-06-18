@@ -1,0 +1,16 @@
+_BASE_: "DSFVT.yaml"
+DATALOADER:
+  NUM_WORKERS: 8
+TEST:
+  EVALUATORS: "BitsEvaluator"
+  VT_SAMPLER:
+    VQ_VAE:
+      CFG: "configs/vqvae/K-DVQVAE.yaml"
+      ENCODER_WEIGHTS: "pretrained/vqvae/K-DVQVAE/netE/model_final.pth"
+      GENERATOR_WEIGHTS: "pretrained/vqvae/K-DVQVAE/netG/model_final.pth"
+      CODEBOOK_WEIGHTS: "pretrained/vqvae/K-DVQVAE/netC/model_final.pth"
+    N_PRIME: 5
+    NUM_SAMPLES: 1
+DATASETS:
+  TRAIN: ("kdvqvae_train",)
+  TEST: ("kdvqvae_test",)

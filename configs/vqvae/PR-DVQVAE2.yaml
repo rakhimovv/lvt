@@ -1,0 +1,22 @@
+_BASE_: "Base-VQVAE.yaml"
+INPUT:
+  FORMAT: "RGB"
+  N_FRAMES_PER_VIDEO_TEST: 16
+MODEL:
+  PIXEL_MEAN: [0.5, 0.5, 0.5]
+  PIXEL_STD: [0.5, 0.5, 0.5]
+  ENCODER:
+    NORM: ""
+    IN_CHANNELS: 3
+  GENERATOR:
+    NORM: ""
+    OUT_CHANNELS: 3
+    OUT_ACTIVATION: "tanh"
+  CODEBOOK:
+    NUM: 4
+    SIZE: 512
+TEST:
+  EVALUATORS: "MSEEvaluator,CodesExtractor"
+DATASETS:
+  TRAIN: ("bair_train",)
+  TEST: ("bair_test_seq",)

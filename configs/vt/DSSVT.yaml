@@ -1,0 +1,50 @@
+INPUT:
+  SCALE_TO_ZEROONE: False
+  N_FRAMES_PER_VIDEO_TRAIN: 4
+  N_FRAMES_PER_VIDEO_TEST: 16
+  PREPARE_SLICES_TRAIN: True
+MODEL:
+  META_ARCHITECTURE: "VideoTransformerModel"
+  INIT_TYPE: "xavier_uniform"
+  AUTOREGRESSIVE:
+    NAME: "VideoTransformer"
+    VT:
+      NC: 4
+      NV: 512
+      KERNEL: (1, 3, 3)
+      STRIDE: (1, 2, 2)
+      DE: 128
+      D: 512
+      DA: 128
+      BLOCKS_E: ((4,8,8),(4,8,8),(4,8,8),(4,8,8),(4,8,8),(4,8,8),(4,8,8),(4,8,8))
+      N_HEAD_E: (8, 8, 8, 8, 8, 8, 8, 8)
+      BLOCKS_D: ((4,8,8),(4,8,8),(4,8,8),(4,8,8),(4,8,8),(4,8,8),(4,8,8),(4,8,8))
+      N_HEAD_D: (8, 8, 8, 8, 8, 8, 8, 8)
+      N_PRIME: 1
+      SHARE_P: False
+SOLVER:
+  IMS_PER_BATCH: 64
+  MAX_ITER: 600000
+  OPTIMIZER_NAME: "rmsprop"
+  LR_G: 0.00002
+  RMSPROP:
+    ALPHA_G: 0.95
+    MOMENTUM_G: 0.9
+  LR_SCHEDULER_NAME: "Identity"
+  CHECKPOINT_PERIOD: 300000
+TEST:
+  EVALUATORS: "BitsEvaluator"
+  VT_SAMPLER:
+    VQ_VAE:
+      CFG: "configs/vqvae/PR-DVQVAE2.yaml"
+      ENCODER_WEIGHTS: "pretrained/prdvqvae2/netE/model_final.pth"
+      GENERATOR_WEIGHTS: "pretrained/prdvqvae2/netG/model_final.pth"
+      CODEBOOK_WEIGHTS: "pretrained/prdvqvae2/netC/model_final.pth"
+    N_PRIME: 5
+    NUM_SAMPLES: 10
+DATASETS:
+  TRAIN: ("prdvqvae_train",)
+  TEST: ("prdvqvae_test",)
+VERSION: 1
+SEED: 29871897
+VIS_PERIOD: 1000000000
