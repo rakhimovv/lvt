@@ -1,6 +1,6 @@
 # Latent Video Transformer
 
-Code for paper _Latent Video Transformer_.
+Code for paper [_Latent Video Transformer_](https://arxiv.org/pdf/2006.10704.pdf).
 
 
 ## Preparation
