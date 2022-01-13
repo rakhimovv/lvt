@@ -92,7 +92,7 @@ setup(
     python_requires=">=3.6",
     install_requires=[
         "termcolor>=1.1",
-        "Pillow==6.2.2",  # torchvision currently does not work with Pillow 7
+        "Pillow==9.0.0",  # torchvision currently does not work with Pillow 7
         "yacs>=0.1.6",
         "tabulate",
         "cloudpickle",
