@@ -89,10 +89,10 @@ setup(
     url="https://github.com/rakhimovv/vidgen",
     description="vidgen",
     packages=find_packages(exclude=("configs", "tests")),
-    python_requires=">=3.6",
+    python_requires=">=3.10",
     install_requires=[
         "termcolor>=1.1",
-        "Pillow==6.2.2",  # torchvision currently does not work with Pillow 7
+        "Pillow>=12.3.0",
         "yacs>=0.1.6",
         "tabulate",
         "cloudpickle",
