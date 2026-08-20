@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Latent Video Transformer"
+authors:
+  - family-names: Rakhimov
+    given-names: Ruslan
+  - family-names: Volkhonskiy
+    given-names: Denis
+  - family-names: Artemov
+    given-names: Alexey
+  - family-names: Zorin
+    given-names: Denis
+  - family-names: Burnaev
+    given-names: Evgeny
+repository-code: "https://github.com/rakhimovv/lvt"
+url: "https://arxiv.org/abs/2006.10704"
+license: Apache-2.0
+preferred-citation:
+  type: conference-paper
+  title: "Latent Video Transformer"
+  authors:
+    - family-names: Rakhimov
+      given-names: Ruslan
+    - family-names: Volkhonskiy
+      given-names: Denis
+    - family-names: Artemov
+      given-names: Alexey
+    - family-names: Zorin
+      given-names: Denis
+    - family-names: Burnaev
+      given-names: Evgeny
+  collection-title: "Proceedings of the 16th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications (VISIGRAPP)"
+  year: 2021
