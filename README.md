@@ -1,5 +1,11 @@
 # Latent Video Transformer
 
+> **Status: archived research code.** This accompanies the VISIGRAPP 2021 paper and has not been
+> maintained since 2020. Dependencies target a detectron2-era PyTorch and it is not expected to
+> build against a modern CUDA toolchain. Released under Apache-2.0, so forks and adaptations are
+> welcome — but please treat it as a reference implementation, not a working package.
+
+
 Code for paper [_Latent Video Transformer_](https://arxiv.org/pdf/2006.10704.pdf).
 
 
