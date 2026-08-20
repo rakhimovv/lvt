@@ -81,7 +81,7 @@ def download_clip(row, label_to_dir, trim, count):
         # Take video from tmp folder and put trimmed to final destination folder
         # better write full path to video
 
-        input_filename = os.path.join(output_path, filename + VIDEO_EXTENSION)
+        input_filename = os.path.join(output_path, filename)
 
         if os.path.exists(output_filename):
             print('Already trimmed: ', filename)
@@ -100,7 +100,7 @@ def download_clip(row, label_to_dir, trim, count):
             )
             try:
                 subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
-            except subprocess.CalledProcessError:
+            except subprocess.CalledProcessError as e:
                 print('Error while trimming: ', filename)
                 return False
             print('Finish trimming: ', filename)
