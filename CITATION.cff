@@ -29,5 +29,10 @@ preferred-citation:
       given-names: Denis
     - family-names: Burnaev
       given-names: Evgeny
-  collection-title: "Proceedings of the 16th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications (VISIGRAPP)"
+  collection-title: "Proceedings of the 16th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications (VISIGRAPP 2021) - Volume 5: VISAPP"
+  publisher:
+    name: "SCITEPRESS"
+  start: 101
+  end: 112
+  doi: "10.5220/0010241801010112"
   year: 2021
