@@ -4,6 +4,13 @@
 > maintained since 2020. Dependencies target a detectron2-era PyTorch and it is not expected to
 > build against a modern CUDA toolchain. Released under Apache-2.0, so forks and adaptations are
 > welcome — but please treat it as a reference implementation, not a working package.
+>
+> **Current work.** This line continues: I now work on embodied AI — world models and VLA
+> policies for robots and virtual worlds — with [corl-team](https://github.com/corl-team).
+> Recent code: [NE-Dreamer](https://github.com/corl-team/nedreamer),
+> [Qantara](https://github.com/corl-team/qantara),
+> [VL-DAC](https://github.com/corl-team/VL-DAC).
+> More at [rakhimovv.github.io](https://rakhimovv.github.io).
 
 
 Code for paper [_Latent Video Transformer_](https://arxiv.org/pdf/2006.10704.pdf).
